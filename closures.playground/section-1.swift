@@ -9,6 +9,10 @@ func sortAscending(i: Int, j:Int) -> Bool{
     return i < j
 }
 
+// closure version of sortAscending
+//{ (i: Int, j: Int) -> Bool in return (i < j) }
+
+
 //var sortedNumber = sorted(numbers, sortAscending) //takes a function that return a Bool
 
 //nameless function AKA closure
@@ -42,3 +46,30 @@ func printLineMaker(times: Int) -> String -> (){
 
 let doWork = printLineMaker(5)
 doWork("things")
+
+
+
+/// Exercise ///
+
+let nums = [2,4,3,5,1]
+let sum = reduce(nums, 0, {(a: Int, b:Int) in a + b})
+assert(sum == 15, "Sum of the `nums` array is 15")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
