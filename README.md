@@ -6,7 +6,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 |  Day | Subjects Covered  | Playgrounds |
 |---|---|---|
-| [Day 0](Day-0)  | Optionals, Arrays  |
+| [Day 0](#Day-0)  | Optionals, Arrays  |
 |[Day 1](Day 1)|||
 |[Day 2](Day 2)|||
 |[Day 3](Day 3)|||
@@ -21,7 +21,7 @@ Collection of observations about teaching styles
 - "Case by case basis, which I'm happy to talk about as we encounter them"
 
 
-## Day 0
+# Day 0
 
 ### Optionals
 * optionals types allow constants to be set to falsey values
