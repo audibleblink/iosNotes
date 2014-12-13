@@ -6,7 +6,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 |  Day | Playgrounds for Subjects Covered  | 
 |---|---|
-| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift) | 
+| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift), [Closures](./closures.playground/section-1.swift) | 
 |[Day 1](#day-1)||
 |[Day 2](#day-2)||
 |[Day 3](#day-3)||
@@ -111,4 +111,34 @@ func catchThemAll(pokemon: String...) {
 ```
 
 Types  
-Types allow for function overloading. That is to say, you can have two functions that are named the same, so long as their parameters take different types. 
+Types allow for function overloading. That is to say, you can have two functions that are  named the same, so long as their parameters take different types.  
+
+### Closures
+Self contained functionality. A function is a named closure. This is kind of like a lambda in Ruby
+
+
+```swift
+// Map with Trailing Closure Syntax
+var evenNumbers2 = map(numbers) { (i: Int) in i * 2 }
+
+
+//returning functions
+
+func printLineMaker(times: Int) -> String -> (){
+    func printer(text: String){
+        for _ in 1...times {
+            println(text)
+        }
+    }
+    return printer
+}
+
+let doWork = printLineMaker(5)
+doWork("things")
+
+// Full closure version
+var evenNumbers = map(sortedNumbers, { (i: Int) -> Int in
+    return i * 2
+})
+
+```
