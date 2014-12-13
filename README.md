@@ -6,7 +6,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 |  Day | Playgrounds for Subjects Covered  | 
 |---|---|
-| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift) | 
+| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift) | 
 |[Day 1](#day-1)||
 |[Day 2](#day-2)||
 |[Day 3](#day-3)||
@@ -72,3 +72,43 @@ Implicitly Unwrapped Optionals
 var x: Int! = 3 // Every time I use x, it's being force unwrapped (x!)
 
 ```
+
+### Functions
+
+
+Named Paramters  
+Function can be written to accept raw parameter, or named parameter (like hashes in Ruby)
+
+```swift
+func greet(name: String, location: String) {
+    println("Hi \(name) from \(location)")
+}
+
+greet("Alex", "Oxnard")
+
+
+func greet(yourName name: String, yourLocation location: String) {
+    println("Hi \(name) from \(location)")
+}
+
+greet(yourName: "Alex", yourLocation: "Oxnard")
+
+
+// You can force both variable names to be equal
+
+func greet(#name: String, #location: String) {
+    println("Hi \(name) from \(location)")
+}
+
+```
+
+Variadic Parameters  
+Multiple Arguments  
+
+```swift
+func catchThemAll(pokemon: String...) {
+}
+```
+
+Types  
+Types allow for function overloading. That is to say, you can have two functions that are named the same, so long as their parameters take different types. 
