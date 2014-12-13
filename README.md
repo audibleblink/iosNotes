@@ -15,7 +15,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 |[Day 6](#day-6)||
 
 ## Teaching Notes
-Collection of observations about teaching styles  
+Collection of observations about Mikey's teaching styles  
 
 - "Ask me again if that's still unclear to you at the end of this lecture"
 - "Case by case basis, which I'm happy to talk about as we encounter them"
