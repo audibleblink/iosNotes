@@ -6,7 +6,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 |  Day | Subjects Covered  | Playgrounds |
 |---|---|---|
-| [Day 0](#day-0)  | Optionals, Arrays  |
+| [Day 0](#day-0)  | Optionals, Arrays, Dictionaries  |
 |[Day 1](#day-1)|||
 |[Day 2](#day-2)|||
 |[Day 3](#day-3)|||
@@ -29,7 +29,7 @@ Collection of observations about teaching styles
 
 Optionals can be modifed safely (or forcibly with a `!`)
 
-```
+```swift
 var s: String?
 s = "this is "
 	
@@ -39,7 +39,7 @@ s? += "something" //appends if s is NOT nil
 
 Optional binding
 
-```
+```swift
 var optionalInt: Int? // this can possibly be nil
 
 if let x: Int = optionalInt { //this only fires if optionalInt is NOT nil
@@ -49,7 +49,7 @@ if let x: Int = optionalInt { //this only fires if optionalInt is NOT nil
 
 Optional chaining
 
-```
+```swift
 
 var optionalString: Int? = "10"
 var nextInt: Int?
@@ -68,7 +68,7 @@ nextInt = optinalString?.toInt()?.successor()
 
 Implicitly Unwrapped Optionals
 
-```
+```swift
 var x: Int! = 3 // Every time I use x, it's being force unwrapped (x!)
 
 ```
