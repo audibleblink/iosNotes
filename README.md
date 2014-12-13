@@ -4,10 +4,10 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 ## Table of Contents
 
-|  Day | Subjects Covered  | Playgrounds
-|---|---|--|
-| [Day 0](##Day-0)  | Optionals, Arrays  |
-|[Day 0](##Day-0)|||
+|  Day | Subjects Covered  | Playgrounds |
+|---|---|---|
+| [Day 0](#Day-0)  | Optionals, Arrays  |
+|[Day 0](#Day-0)|||
 |[Day 1](Day 1)|||
 |[Day 2](Day 2)|||
 |[Day 3](Day 3)|||
