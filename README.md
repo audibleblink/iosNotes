@@ -6,7 +6,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 
 |  Day | Playgrounds for Subjects Covered  | 
 |---|---|
-| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift), [Closures](./closures.playground/section-1.swift) | 
+| [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift), [Closures](./closures.playground/section-1.swift), [Enumerations](./enumerations.playground/section-1.swift) | 
 |[Day 1](#day-1)||
 |[Day 2](#day-2)||
 |[Day 3](#day-3)||
