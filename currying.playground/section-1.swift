@@ -1,21 +1,22 @@
-// Standard way of writing a greet function
+// Playground - noun: a place where people can play
+
+import UIKit
+
 func greet(name: String, salutation: String) -> String {
     return "\(salutation) \(name)"
 }
 
 greet("alex", "hello")
 
-
-// Curried function
-func greeter(salutation: String) -> (String) -> String { // greeter returns a function that takes a string. That returned function then returns a String
-
-    func greet(name: String) -> String { // build the function that is to be returned
-        return "\(salutation) \(name)" // name will be provided when this function is called later; outside of this greeter function
+func greeter(salutation: String) -> (String) -> String {
+    
+    func greet(name: String) -> String {
+        return "\(salutation) \(name)"
     }
-
-    return greet //returns a function with the salutation prepopulated, takes a String; return a String
+    
+    return greet //returns a function with the salutation prepopulated
 }
 
 let greetByName = greeter("Hello there")
 
-println( greetByName("Alex") )
+greetByName("Alex")

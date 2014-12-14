@@ -1,4 +1,4 @@
-# Beginning iOS w/ Swift
+# Beginning iOS w/ Swifts
 
 Notes from the Beginning iOS course from Big Nerd Ranch
 
@@ -7,7 +7,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 |  Day | Playgrounds for Subjects Covered  |
 |---|---|
 | [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift), [Closures](./closures.playground/section-1.swift), [Enumerations](./enumerations.playground/section-1.swift) |
-|[Day 1](#day-1)| [Structs and Classes](./structsandclasses.playground/section-1.swift), [Currying](./currying.playground/section-1.swift)   |
+|[Day 1](#day-1)| [Structs and Classes](./structsandclasses.playground/section-1.swift), [Currying](./currying.playground/section-1.swift), [Properties](./properties.swift)   |
 |[Day 2](#day-2)||
 |[Day 3](#day-3)||
 |[Day 4](#day-4)||
@@ -24,8 +24,8 @@ Collection of observations about Mikey's teaching styles
 # Day 0
 
 ### Optionals
-* optionals types allow constants to be set to falsey values
-	* this is denoted by adding a `?` to the end of a type declararion
+* optionals types allow constants to be set to falsey values  
+	* this is denoted by adding a `?` to the end of a type declararion  
 
 Optionals can be modifed safely (or forcibly with a `!`)
 
@@ -37,7 +37,7 @@ s? += "something" //appends if s is NOT nil
 
 ```
 
-Optional binding
+__Optional binding__  
 
 ```swift
 var optionalInt: Int? // this can possibly be nil
@@ -47,7 +47,7 @@ if let x: Int = optionalInt { //this only fires if optionalInt is NOT nil
 }
 ```
 
-Optional chaining
+__Optional chaining__  
 
 ```swift
 
@@ -76,7 +76,7 @@ var x: Int! = 3 // Every time I use x, it's being force unwrapped (x!)
 ### Functions
 
 
-Named Paramters
+__Named Paramters__   
 Function can be written to accept raw parameter, or named parameter (like hashes in Ruby)
 
 ```swift
@@ -102,7 +102,7 @@ func greet(#name: String, #location: String) {
 
 ```
 
-Variadic Parameters
+__Variadic Parameters__  
 Multiple Arguments
 
 ```swift
@@ -110,7 +110,7 @@ func catchThemAll(pokemon: String...) {
 }
 ```
 
-Types
+__Types__  
 Types allow for function overloading. That is to say, you can have two functions that are  named the same, so long as their parameters take different types.
 
 ### Closures
@@ -150,8 +150,8 @@ TBD
 
 ### Structs and Classes
 
-Stucts cannot have sub-structs. Classes can have subclasses.
-Struct are value types. Classes are reference types.
+Stucts cannot have sub-structs. Classes can have subclasses.  
+Struct are value types. Classes are reference types.  
 
 ```swift
 struct Body {
@@ -172,8 +172,8 @@ class Employee: Person { // Employee is a type of Person
 }
 ```
 
-If you pass in a struct to a function, that struct is copied. It's non-mutating.
-'Pass by copy'
+If you pass in a struct to a function, that struct is copied. It's non-mutating.  
+'Pass by copy'  
 
 ```swift
 var b = Body()
@@ -187,7 +187,7 @@ b.weight // returns 100, not 0
 ```
 
 
-Identity
+__Identity__  
 
 ```swift
 /// Struct
@@ -207,7 +207,8 @@ p === q // returns TRUE
 
 ### Properties
 
-Computed property - It's like a method. (Without using bananas)
+__Computed property__  
+It's like a method. (Without using bananas)
 
 ```swift
 class Person {
@@ -223,7 +224,7 @@ class Person {
 // NSUserDefaults and let it worry about the persistance.
 ```
 
-Lazy Properties
+--Lazy Properties--  
 
 ```swift
 class Person {
@@ -239,8 +240,8 @@ class Person {
 }
 ```
 
-Property Observers
-They watch properties for a change.
+__Property Observers__  
+They watch properties for a change.  
     - Everytime age is changed, a function runs, printing Happy Birthday to the console
 
 ```swift
@@ -263,11 +264,11 @@ eddy.age++ // console prints "Happy Birthday to you! You are no longer 20"
 
 ```
 
-Access Control(private methods/properties)
+Access Control(private methods/properties)  
 
-    - Public - Visible to all files in the module or those that import the module
-    - Internal(default) - visible to all files in the same module
-    - Private - visible only within its defining source file
+    - Public - Visible to all files in the module or those that import the module  
+    - Internal(default) - visible to all files in the same module  
+    - Private - visible only within its defining source file  
 
 ```swift
 public class Vampire: Monster {
@@ -294,3 +295,72 @@ public class Vampire: Monster {
 ```
 
 
+### Initializers
+
+Compiler gives you an init() method. Class and Struct initializers are different
+
+```swift
+struct Point {
+    let x: Double
+    let y: Double
+
+    // Freebie for structs
+    //init(x: Double, y: Double) {
+    //    self.x = x
+    //    self.y = y
+    //}
+
+    //I can create another init that calls an init
+    init(){
+        self.init(x: 0, y:0) // calls the original memberwise init with default values
+    }
+
+}
+```
+
+__Class Initializers__  
+
+Classes do not get a "freebie" init, and you must denote 'convenience for additional inits'  
+Designated inits must call superclass inits  
+Convenience inits must call an init from its own class  
+
+```swift
+class Player(isPro: Bool, name: String) {
+    let isPro: Bool
+    let name: String
+
+    init(isAPro: Bool, playerName: String) {
+        isPro = isAPro
+        name = playerName
+    }
+
+    convenience init(playerName: String) { // calls the init 5 lines up; gets run if I only pass in a name when trying to init a Player
+        self.init(isAPro: true, playerName: playerName)
+    }
+}
+```
+
+__Initializer Safety Steps__  
+
+1. Initialize all your properties
+2. Call Superclass initialize
+3. Now "self" is usable
+4. Your properties can be further modified
+
+__Required Initializers__   
+TBW
+
+__Deinitilization__  
+
+Things to run when an object is destroyed
+
+```swift
+class MyClass: UIViewController {
+    init {
+        NSNotificationCenter.defaultCenter().addObserver(self, /*some code*/)
+    }
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+}
+```            
