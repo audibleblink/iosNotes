@@ -7,7 +7,7 @@ Notes from the Beginning iOS course from Big Nerd Ranch
 |  Day | Playgrounds for Subjects Covered  | 
 |---|---|
 | [Day 0](#day-0)  | [Arrays](./arrays.playground/section-1.swift), [Optionals](./optionals.playground/section-1.swift), [Dictionaries](./dictionaries.playground/section-1.swift), [Functions](./functions.playground/section-1.swift), [Closures](./closures.playground/section-1.swift), [Enumerations](./enumerations.playground/section-1.swift) | 
-|[Day 1](#day-1)||
+|[Day 1](#day-1)| [Structs and Classes](./structsandclasses.playground/section-1.swift), [Currying](./currying.playground/section-1.swift)   |
 |[Day 2](#day-2)||
 |[Day 3](#day-3)||
 |[Day 4](#day-4)||
@@ -141,4 +141,98 @@ var evenNumbers = map(sortedNumbers, { (i: Int) -> Int in
     return i * 2
 })
 
+```
+
+### Enumerations
+TBD
+
+# Day 1
+
+### Structs and Classes
+
+Stucts cannot have sub-structs. Classes can have subclasses.  
+Struct are value types. Classes are reference types.
+
+```swift
+struct Body {
+    var height: Double = Double()
+    var weight: Double = Douvle()
+    mutating func 
+}
+
+Person Person {
+var body: Body = Body()    
+}
+
+var matt = Person()
+matt.body.height = 60.0
+
+class Employee: Person { // Employee is a type of Person
+    var employeeId: Int = 0
+}
+```
+
+If you pass in a struct to a function, that struct is copied. It's non-mutating.  
+'Pass by copy'
+
+```swift
+var b = Body()
+b.wieght = 100
+func disposeOf(aBody: Body,){
+    aBody.weight = 0]
+}
+
+b.weight // returns 100, not 0
+
+```
+
+
+Identity
+
+```swift
+/// Struct
+
+let p = Body()
+let q = p
+
+p === q // FALSE
+
+/// Class
+
+let p = Person()
+let q = p
+
+p === q // returns TRUE
+
+```
+
+### Properties
+
+Computed property - It's like a method. (Without using bananas)
+
+```swift
+class Person {
+    var body = Body()
+    var bmi: Double {
+        get {
+            return body.weight / (body.weight * body.height)
+        }
+    }
+}
+```
+
+Lazy Properties
+
+```swift
+class Person {
+    var body = Body()
+    var bmi: Double {
+        get {
+            return body.weight / (body.weight * body.height)
+        }
+    }
+    lazy var passportPhoto: Photograph = {
+        return loadPhotoForPerson(self)
+    }
+}
 ```
