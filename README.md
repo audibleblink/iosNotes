@@ -25,7 +25,7 @@ Collection of observations about Mikey's teaching styles
 
 ### Optionals
 * optionals types allow constants to be set to falsey values  
-	* this is denoted by adding a `?` to the end of a type declararion  
+    * this is denoted by adding a `?` to the end of a type declararion  
 
 Optionals can be modifed safely (or forcibly with a `!`)
 
@@ -224,7 +224,7 @@ class Person {
 // NSUserDefaults and let it worry about the persistance.
 ```
 
-__Lazy Properties__  
+--Lazy Properties--  
 
 ```swift
 class Person {
@@ -348,7 +348,53 @@ __Initializer Safety Steps__
 4. Your properties can be further modified
 
 __Required Initializers__   
-TBW
+Force subclasses to use the parent class' init()
+
+```swift
+class Monster {
+    let name: String
+    var town: Town? = nil
+    var victimPool: Int {
+        get {
+            return town?.population ?? 0 // set default 0 if population == nil
+        }
+        set(newVictimPool) { // named `newValue`
+            town?.population = newVictimPool
+        }
+    }
+
+    required init(town: Town?, monsterName: String) {
+        self.town = town
+        name = monsterName
+    }
+
+}
+
+
+class Zombie: Monster {
+    class var spookyNoise: String { // class variable
+        return "Brains..."
+    }
+    var walksWithLimp: Bool
+    private var isFallingApart: Bool
+
+    init(limp: Bool, fallingApart: Bool, town: Town?, monsterName: String) {
+        walksWithLimp = limp
+        isFallingApart = fallingApart
+        super.init(town: town, monsterName: monsterName)
+    }
+
+    // this is the new 'designated initializer'
+    required init(town: Town?, monsterName: String) { // only fires on first init, not through delegation
+    // since there are no params for this, and we must use the init from 
+    // the superclass and set our variables here
+        walksWithLimp = false 
+        isFallingApart = false
+        super.init(town: town, monsterName: monsterName)
+    }
+
+}
+```
 
 __Deinitilization__  
 
