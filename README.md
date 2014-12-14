@@ -224,7 +224,7 @@ class Person {
 // NSUserDefaults and let it worry about the persistance.
 ```
 
---Lazy Properties--  
+__Lazy Properties__  
 
 ```swift
 class Person {
