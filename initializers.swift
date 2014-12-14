@@ -36,7 +36,7 @@ class Monster {
         }
     }
 
-    required init(town: Town?, monsterName: String) {
+    init(town: Town?, monsterName: String) {
         self.town = town
         name = monsterName
     }
@@ -69,13 +69,8 @@ class Zombie: Monster {
         self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "")
     }
 
-    // this is the new 'designated initializer'
-    required init(town: Town?, monsterName: String) { // only fires on first init, not through delegation
-    // since there are no params for this, and we must use the init from 
-    // the superclass and set our variables here
-        walksWithLimp = false 
-        isFallingApart = false
-        super.init(town: town, monsterName: monsterName)
+    convenience override init(town: Town?, monsterName: String) { 
+        self.init(limp: false, fallingApart: false, town: town, monsterName: monsterName)
     }
     override func terrorizeTown() {
         if !isFallingApart {
@@ -87,4 +82,5 @@ class Zombie: Monster {
 var myTown: Town? = Town(region: "CA", population: 42, stopLights: 4)
 let fred = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")
 let bobby = Zombie(limp: false, fallingApart: true)
+let lisa = Zombie(town: myTown, monsterName: "Lisa")
 
