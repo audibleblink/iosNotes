@@ -1,4 +1,4 @@
-# Beginning iOS w/ Swifts
+# Beginning iOS w/ Swift
 
 Notes from the Beginning iOS course from Big Nerd Ranch
 

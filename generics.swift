@@ -11,9 +11,9 @@ var newNums = nums.map({(i: Int) in
 // two curried functions that both return
 // a closure with i prepopulated by #map
 
-// func multiplyBy(factor: Int)(i: Int) -> Int { 
-//     return i * factor
-// }
+func multiplyBy(factor: Int)(i: Int) -> Int { 
+    return i * factor
+}
 
 func multiplyBy(factor: Int) -> (i: Int) -> Int {
     func thing(i: Int) -> Int {
