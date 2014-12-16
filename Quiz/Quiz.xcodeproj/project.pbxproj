@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7ED39F1A3F914D005D8A05 /* MiniMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */; };
+		FA7ED3A11A3FA1F1005D8A05 /* HtpnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ED3A01A3FA1F1005D8A05 /* HtpnosisViewController.swift */; };
 		FAEA13EF1A3F29D600772C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */; };
 		FAEA13F11A3F29D600772C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA13F01A3F29D600772C70 /* ViewController.swift */; };
 		FAEA13F41A3F29D600772C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEA13F21A3F29D600772C70 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniMapView.swift; sourceTree = "<group>"; };
+		FA7ED3A01A3FA1F1005D8A05 /* HtpnosisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HtpnosisViewController.swift; sourceTree = "<group>"; };
 		FAEA13E91A3F29D600772C70 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEA13ED1A3F29D600772C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,8 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */,
+				FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */,
 				FAF4E1711A3F605000697D46 /* HypnosisView.swift */,
 				FAEA13F01A3F29D600772C70 /* ViewController.swift */,
+				FA7ED3A01A3FA1F1005D8A05 /* HtpnosisViewController.swift */,
 				FAEA13F21A3F29D600772C70 /* Main.storyboard */,
 				FAEA13F51A3F29D600772C70 /* Images.xcassets */,
 				FAEA13F71A3F29D600772C70 /* LaunchScreen.xib */,
@@ -215,8 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7ED3A11A3FA1F1005D8A05 /* HtpnosisViewController.swift in Sources */,
 				FAEA13F11A3F29D600772C70 /* ViewController.swift in Sources */,
 				FAF4E1721A3F605000697D46 /* HypnosisView.swift in Sources */,
+				FA7ED39F1A3F914D005D8A05 /* MiniMapView.swift in Sources */,
 				FAEA13EF1A3F29D600772C70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,21 +9,63 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
 
     var window: UIWindow?
+    var miniMap: MiniMapView?
+    var hypnosisView: HypnosisView?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let firstFrame = window!.bounds
-        let firstView = HypnosisView(frame: firstFrame)
-        window!.addSubview(firstView)
+        
+        // Create CGRects for frames
+        var screenRect = window!.bounds
+        var bigRect = screenRect
+        bigRect.size.width *= 2.0
+        bigRect.size.height *= 2.0
+
+        // Create a screen-sized scroll view and add it to the window
+        let scrollView = UIScrollView(frame: screenRect)
+        
+        // Set a delegat for the scrollView
+        scrollView.delegate = self
+        // Set scroll limits
+        scrollView.minimumZoomScale = 0.5
+        scrollView.maximumZoomScale = 2.0
+        
+        window!.addSubview(scrollView)
+        
+        // Create a super-sized hypnosis view and add it to the scroll view
+        let hypnosisView = HypnosisView(frame: bigRect)
+        scrollView.addSubview(hypnosisView)
+        
+        // Set the property to reference the local variable
+        self.hypnosisView = hypnosisView
+        
+        // Tell the scroll view how big its content area is
+        scrollView.contentSize = bigRect.size
+        
+        // Add MiniMap to UIWindow
+        let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
+        window!.addSubview(miniMap)
+        miniMap.updateWithScrollView(scrollView)
+        self.miniMap = miniMap
+        
         window!.backgroundColor = UIColor.whiteColor()
         window!.makeKeyAndVisible()
         
         return true
+    }
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return hypnosisView
+    }
+    
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        miniMap?.updateWithScrollView(scrollView)
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -3,7 +3,7 @@
 import UIKit
 
 struct Town {
-    var population = 9
+    var population         = 9
     var numberOfStopLights = 4
     
     func townDescription() {
@@ -17,7 +17,7 @@ struct Town {
 
 class Monster {
     var town: Town? = Town()
-    var name = "Monster"
+    var name        = "Monster"
     
     func terrorizeTown() {
         if let t = town {

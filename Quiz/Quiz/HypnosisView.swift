@@ -46,7 +46,6 @@ class HypnosisView: UIView {
 
     
     func timerFired(timer: NSTimer) {
-        println("pew pew")
         // Increment the radius offset
         radiusOffset += 1.0
         // Reset the radius offset at 20 to create a nice, looping effect
