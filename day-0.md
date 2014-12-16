@@ -1,6 +1,6 @@
 # Day 0
 
-### Optionals
+## Optionals
 * optionals types allow constants to be set to falsey values  
     * this is denoted by adding a `?` to the end of a type declararion  
 
@@ -50,7 +50,7 @@ var x: Int! = 3 // Every time I use x, it's being force unwrapped (x!)
 
 ```
 
-### Functions
+## Functions
 
 
 __Named Paramters__   
@@ -90,7 +90,7 @@ func catchThemAll(pokemon: String...) {
 __Types__  
 Types allow for function overloading. That is to say, you can have two functions that are  named the same, so long as their parameters take different types.
 
-### Closures
+## Closures
 Self contained functionality. A function is a named closure. This is kind of like a lambda in Ruby
 
 
@@ -120,6 +120,6 @@ var evenNumbers = map(sortedNumbers, { (i: Int) -> Int in
 
 ```
 
-### Enumerations
+## Enumerations
 TBD
 

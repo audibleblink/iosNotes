@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
     var window: UIWindow?
     var miniMap: MiniMapView?
     var hypnosisView: HypnosisView?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         

@@ -1,6 +1,6 @@
 # Day 1
 
-### Structs and Classes
+## Structs and Classes
 
 Stucts cannot have sub-structs. Classes can have subclasses.  
 Struct are value types. Classes are reference types.  
@@ -57,7 +57,7 @@ let q = p
 p === q // returns TRUE
 ```
 
-### Properties
+## Properties
 
 __Computed property__  
 It's like a method. (Without using bananas)
@@ -147,7 +147,7 @@ public class Vampire: Monster {
 ```
 
 
-### Initializers
+## Initializers
 
 Compiler gives you an init() method. Class and Struct initializers are different
 

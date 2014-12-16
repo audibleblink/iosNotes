@@ -170,6 +170,7 @@
 				TargetAttributes = {
 					FAEA13E81A3F29D600772C70 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = L598LR8UA6;
 					};
 					FAEA13FD1A3F29D600772C70 = {
 						CreatedOnToolsVersion = 6.1.1;
