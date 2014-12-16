@@ -45,4 +45,6 @@ class HypnosisViewController: UIViewController {
         println("HypnosisViewController loaded its view.")
     }
     
+    
+    
 }

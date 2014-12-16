@@ -18,10 +18,21 @@ class HypnosisView: UIView {
     var timer: NSTimer?
     let logoImage: UIImage? = UIImage(named: "hyp.png")
     
+    func addColorPicker(){
+        var picker = UISegmentedControl (items: ["blue","red","green"])
+        picker.frame = CGRectMake(40, 40, 300, 30)
+//        picker.backgroundColor = UIColor.whiteColor()
+        picker.selectedSegmentIndex = 0
+        picker.addTarget(self, action: "segmentedValueChanged:", forControlEvents: .ValueChanged)
+        self.addSubview(picker)
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         // All HypnosisViews start with a clear background color
         backgroundColor = UIColor.clearColor()
+        addColorPicker()
     }
     
     required init(coder aDecoder: NSCoder) {
