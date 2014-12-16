@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA10A3F21A40AC3200D4DF11 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A3F01A40AC3200D4DF11 /* QuizViewController.swift */; };
+		FA10A3F31A40AC3200D4DF11 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA10A3F11A40AC3200D4DF11 /* QuizViewController.xib */; };
 		FA7ED39F1A3F914D005D8A05 /* MiniMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */; };
 		FA7ED3A11A3FA1F1005D8A05 /* HypnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ED3A01A3FA1F1005D8A05 /* HypnosisViewController.swift */; };
 		FAEA13EF1A3F29D600772C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */; };
-		FAEA13F11A3F29D600772C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA13F01A3F29D600772C70 /* ViewController.swift */; };
-		FAEA13F41A3F29D600772C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEA13F21A3F29D600772C70 /* Main.storyboard */; };
 		FAEA13F61A3F29D600772C70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEA13F51A3F29D600772C70 /* Images.xcassets */; };
 		FAEA13F91A3F29D600772C70 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAEA13F71A3F29D600772C70 /* LaunchScreen.xib */; };
 		FAEA14051A3F29D600772C70 /* QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA14041A3F29D600772C70 /* QuizTests.swift */; };
@@ -31,13 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA10A3F01A40AC3200D4DF11 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		FA10A3F11A40AC3200D4DF11 /* QuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniMapView.swift; sourceTree = "<group>"; };
 		FA7ED3A01A3FA1F1005D8A05 /* HypnosisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnosisViewController.swift; sourceTree = "<group>"; };
 		FAEA13E91A3F29D600772C70 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEA13ED1A3F29D600772C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAEA13F01A3F29D600772C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAEA13F31A3F29D600772C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAEA13F51A3F29D600772C70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAEA13F81A3F29D600772C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FAEA13FE1A3F29D600772C70 /* QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +45,7 @@
 		FAEA14041A3F29D600772C70 /* QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTests.swift; sourceTree = "<group>"; };
 		FAF4E1711A3F605000697D46 /* HypnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnosisView.swift; sourceTree = "<group>"; };
 		FAF665341A3FE1900068AC31 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
-		FAF665381A3FE2A00068AC31 /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
+		FAF665381A3FE2A00068AC31 /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReminderViewController.xib; path = ../ReminderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,8 @@
 		FAEA13E01A3F29D600772C70 = {
 			isa = PBXGroup;
 			children = (
-				FAF665381A3FE2A00068AC31 /* ReminderViewController.xib */,
+				FA10A3F01A40AC3200D4DF11 /* QuizViewController.swift */,
+				FA10A3F11A40AC3200D4DF11 /* QuizViewController.xib */,
 				FAEA13EB1A3F29D600772C70 /* Quiz */,
 				FAEA14011A3F29D600772C70 /* QuizTests */,
 				FAEA13EA1A3F29D600772C70 /* Products */,
@@ -89,12 +90,11 @@
 			isa = PBXGroup;
 			children = (
 				FAEA13EE1A3F29D600772C70 /* AppDelegate.swift */,
+				FAF665381A3FE2A00068AC31 /* ReminderViewController.xib */,
 				FAF665341A3FE1900068AC31 /* ReminderViewController.swift */,
 				FA7ED39E1A3F914D005D8A05 /* MiniMapView.swift */,
 				FAF4E1711A3F605000697D46 /* HypnosisView.swift */,
-				FAEA13F01A3F29D600772C70 /* ViewController.swift */,
 				FA7ED3A01A3FA1F1005D8A05 /* HypnosisViewController.swift */,
-				FAEA13F21A3F29D600772C70 /* Main.storyboard */,
 				FAEA13F51A3F29D600772C70 /* Images.xcassets */,
 				FAEA13F71A3F29D600772C70 /* LaunchScreen.xib */,
 				FAEA13EC1A3F29D600772C70 /* Supporting Files */,
@@ -209,9 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF665391A3FE2A00068AC31 /* ReminderViewController.xib in Resources */,
-				FAEA13F41A3F29D600772C70 /* Main.storyboard in Resources */,
 				FAEA13F91A3F29D600772C70 /* LaunchScreen.xib in Resources */,
 				FAEA13F61A3F29D600772C70 /* Images.xcassets in Resources */,
+				FA10A3F31A40AC3200D4DF11 /* QuizViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,9 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7ED3A11A3FA1F1005D8A05 /* HypnosisViewController.swift in Sources */,
-				FAEA13F11A3F29D600772C70 /* ViewController.swift in Sources */,
 				FAF665351A3FE1900068AC31 /* ReminderViewController.swift in Sources */,
 				FAF4E1721A3F605000697D46 /* HypnosisView.swift in Sources */,
+				FA10A3F21A40AC3200D4DF11 /* QuizViewController.swift in Sources */,
 				FA7ED39F1A3F914D005D8A05 /* MiniMapView.swift in Sources */,
 				FAEA13EF1A3F29D600772C70 /* AppDelegate.swift in Sources */,
 			);
@@ -257,14 +257,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FAEA13F21A3F29D600772C70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAEA13F31A3F29D600772C70 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAEA13F71A3F29D600772C70 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

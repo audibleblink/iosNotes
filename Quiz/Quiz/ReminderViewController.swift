@@ -12,6 +12,22 @@ class ReminderViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    override func viewDidLoad() {
+        // Always call the super implementation of viewDidLoad
+        super.viewDidLoad()
+        println("ReminderViewController loaded its view.")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        datePicker.minimumDate = NSDate(timeIntervalSinceNow: 60)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        println("Reminder View Dissapeared")
+    }
+    
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Set the tab bar item's title
@@ -28,6 +44,11 @@ class ReminderViewController: UIViewController {
     
     @IBAction func addReminder(sender: AnyObject) {
         let date = datePicker.date
+        let note = UILocalNotification()
+        
+        note.alertBody = "Hypnotize me!"
+        note.fireDate = date
+        UIApplication.sharedApplication().scheduleLocalNotification(note)
         println("Setting a reminder for \(date)")
     }
    

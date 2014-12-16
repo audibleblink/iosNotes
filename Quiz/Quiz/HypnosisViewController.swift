@@ -10,6 +10,13 @@ import UIKit
 
 class HypnosisViewController: UIViewController {
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        println("HypnoView View Dissapeared")
+        view = nil
+    }
+
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Set the tab bar item's title
@@ -30,6 +37,12 @@ class HypnosisViewController: UIViewController {
         let backgroundView = HypnosisView(frame: frame)
         view               = backgroundView
         // Set it as *the* view of this view controller
+    }
+    
+    override func viewDidLoad() {
+        // Always call the super implementation of viewDidLoad
+        super.viewDidLoad()
+        println("HypnosisViewController loaded its view.")
     }
     
 }

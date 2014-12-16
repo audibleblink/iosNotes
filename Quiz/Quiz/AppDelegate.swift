@@ -52,19 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
         // window!.addSubview(miniMap)
         // miniMap.updateWithScrollView(scrollView)
         // self.miniMap = miniMap
+        
+        let settings = UIUserNotificationSettings(forTypes: .Alert,
+            categories: nil)
+        application.registerUserNotificationSettings(settings)
 
         let hvc = HypnosisViewController()
+        let rvc = ReminderViewController()
+        let qvc = QuizViewController()
 
-//        window!.rootViewController = hvc        
-
-        // This variable represent the app bundle
-        let appBundle = NSBundle.mainBundle()
-        
-        // Look in the appBundle for the file ReminderViewController.xib
-        let rvc = ReminderViewController(nibName: "ReminderViewController", bundle: appBundle)
         let tbc = UITabBarController()
-        
-        tbc.viewControllers = [hvc, rvc]
+        tbc.viewControllers = [rvc, hvc, qvc]
         window!.rootViewController = tbc
         
         window!.backgroundColor = UIColor.whiteColor()
