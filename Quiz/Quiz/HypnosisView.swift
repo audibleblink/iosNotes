@@ -16,7 +16,7 @@ class HypnosisView: UIView {
         }
     }
     var timer: NSTimer?
-    let logoImage: UIImage? = UIImage(named: "/Users/alex/Desktop/hyp.png")
+    let logoImage: UIImage? = UIImage(named: "hyp.png")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

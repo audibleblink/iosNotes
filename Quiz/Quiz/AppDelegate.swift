@@ -20,38 +20,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        // Create CGRects for frames
-        var screenRect = window!.bounds
-        var bigRect = screenRect
-        bigRect.size.width *= 2.0
-        bigRect.size.height *= 2.0
+        // // Create CGRects for frames
+        // var screenRect = window!.bounds
+        // var bigRect = screenRect
+        // bigRect.size.width *= 2.0
+        // bigRect.size.height *= 2.0
 
-        // Create a screen-sized scroll view and add it to the window
-        let scrollView = UIScrollView(frame: screenRect)
+        // // Create a screen-sized scroll view and add it to the window
+        // let scrollView = UIScrollView(frame: screenRect)
         
-        // Set a delegat for the scrollView
-        scrollView.delegate = self
-        // Set scroll limits
-        scrollView.minimumZoomScale = 0.5
-        scrollView.maximumZoomScale = 2.0
+        // // Set a delegat for the scrollView
+        // scrollView.delegate = self
+        // // Set scroll limits
+        // scrollView.minimumZoomScale = 0.5
+        // scrollView.maximumZoomScale = 2.0
         
-        window!.addSubview(scrollView)
+        // window!.addSubview(scrollView)
         
-        // Create a super-sized hypnosis view and add it to the scroll view
-        let hypnosisView = HypnosisView(frame: bigRect)
-        scrollView.addSubview(hypnosisView)
+        // // Create a super-sized hypnosis view and add it to the scroll view
+        // let hypnosisView = HypnosisView(frame: bigRect)
+        // scrollView.addSubview(hypnosisView)
         
-        // Set the property to reference the local variable
-        self.hypnosisView = hypnosisView
+        // // Set the property to reference the local variable
+        // self.hypnosisView = hypnosisView
         
-        // Tell the scroll view how big its content area is
-        scrollView.contentSize = bigRect.size
+        // // Tell the scroll view how big its content area is
+        // scrollView.contentSize = bigRect.size
         
-        // Add MiniMap to UIWindow
-        let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
-        window!.addSubview(miniMap)
-        miniMap.updateWithScrollView(scrollView)
-        self.miniMap = miniMap
+        // // Add MiniMap to UIWindow
+        // let miniMap = MiniMapView(frame: CGRect(x: 10, y: 30, width: 75, height: 135))
+        // window!.addSubview(miniMap)
+        // miniMap.updateWithScrollView(scrollView)
+        // self.miniMap = miniMap
+
+        let hvc = HypnosisViewController()
+
+//        window!.rootViewController = hvc        
+
+        // This variable represent the app bundle
+        let appBundle = NSBundle.mainBundle()
+        
+        // Look in the appBundle for the file ReminderViewController.xib
+        let rvc = ReminderViewController(nibName: "ReminderViewController", bundle: appBundle)
+        let tbc = UITabBarController()
+        
+        tbc.viewControllers = [hvc, rvc]
+        window!.rootViewController = tbc
         
         window!.backgroundColor = UIColor.whiteColor()
         window!.makeKeyAndVisible()
