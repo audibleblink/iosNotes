@@ -1,15 +1,15 @@
 //
-//  HomePwnerTests.swift
-//  HomePwnerTests
+//  HomepwnerTests.swift
+//  HomepwnerTests
 //
-//  Created by Alex Flores on 12/16/14.
-//  Copyright (c) 2014 Alex Flores. All rights reserved.
+//  Created by Christian Keur on 10/5/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class HomePwnerTests: XCTestCase {
+class HomepwnerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  HomePwner
+//  Homepwner
 //
-//  Created by Alex Flores on 12/16/14.
-//  Copyright (c) 2014 Alex Flores. All rights reserved.
+//  Created by Christian Keur on 10/5/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 import UIKit
@@ -15,16 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
         // Override point for customization after application launch.
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window!.backgroundColor = UIColor.whiteColor()
+        
+        // Create an ItemStore
         let itemStore = ItemStore()
-        var itemCtrl = ItemsViewController(itemStore: itemStore)
         
+        // Create an ItemStore
+        let imageStore = ImageStore()
         
-        window!.rootViewController = itemCtrl
+        // Create a ItemsViewController
+        let ivc = ItemsViewController(itemStore: itemStore, imageStore: imageStore)
+        
+        let navController = UINavigationController(rootViewController: ivc)
+        
+        // Place navigation controller's view in the window hierarchy
+        window!.rootViewController = navController
+        
+        window!.backgroundColor = UIColor.whiteColor()
         window!.makeKeyAndVisible()
+        
         return true
     }
 
